@@ -1,0 +1,53 @@
+<%- include("partials/_header") %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5 offset-md-3 card bg-dark">
+      <div class="card-body">
+        <form action="/update/<%= service.IDProducto%>" method="POST">
+          <input
+            type="text"
+            name="Descripcion"
+            value="<%= service.Descripcion %>"
+            placeholder="Descripcion"
+            class="form-control mb-3"
+            autofocus
+          />
+          <select name="IDCategoria" class="form-control mb-2">
+            <option value="" disabled>Seleccione una categoría</option>
+            
+            <option value="1" <% if (service.IDCategoria === 1) { %>selected<% } %>>ICLOUD REMOVE APPLE WATCH (GPS MODELS)</option>
+            <option value="2" <% if (service.IDCategoria === 2) { %>selected<% } %>> ICLOUD REMOVE IPADS BY SN (WIFI DEVICES)</option>
+            <option value="3" <% if (service.IDCategoria === 3) { %>selected<% } %>> ICLOUD REMOVE IPODS BY SN (WIFI DEVICES)</option>
+            <option value="5" <% if (service.IDCategoria === 5) { %>selected<% } %>>IKINGCODE (MDM BYPASS)</option>
+            <option value="6" <% if (service.IDCategoria === 6) { %>selected<% } %>>LPRO GSM/MEID [MACOS]</option>
+            <option value="7" <% if (service.IDCategoria === 7) { %>selected<% } %>>HFZ MEID/GSM [MAC TOOL]</option>
+            <option value="8" <% if (service.IDCategoria === 8) { %>selected<% } %>>HFZ FMI OFF - IWATCH</option>
+            <option value="9" <% if (service.IDCategoria === 9) { %>selected<% } %>>HFZ SERVICE (BYPASS)</option>
+            <option value="10" <% if (service.IDCategoria === 10) { %>selected<% } %>>IKEY TOOLS [MEID/GSM]</option>
+            <option value="11" <% if (service.IDCategoria === 11) { %>selected<% } %>>IREMOVAL PRO [WINDOWSTOOL]</option>
+            <option value="12" <% if (service.IDCategoria === 12) { %>selected<% } %>>SMD RAMDISK (MACOS)</option>
+            <option value="13" <% if (service.IDCategoria === 13) { %>selected<% } %>>IREMOVE TOOL (ICLOUD BYPASS)</option>
+            <option value="14" <% if (service.IDCategoria === 14) { %>selected<% } %>>MEXICO NETWORKS PHONES UNLOCKED</option>
+            <option value="15" <% if (service.IDCategoria === 15) { %>selected<% } %>>NETWORK IPHONE UNLOCKED (LATINOAMERICA)</option>
+            <option value="16" <% if (service.IDCategoria === 16) { %>selected<% } %>>HONOR SERVICES</option>
+            <option value="17" <% if (service.IDCategoria === 17) { %>selected<% } %>>LG UNLOCK</option>
+            <option value="18" <% if (service.IDCategoria === 18) { %>selected<% } %>>CHECK DEVICE INFO</option>
+            <option value="19" <% if (service.IDCategoria === 19) { %>selected<% } %>>XIAOMI SERVICES</option>
+          </select>
+          <input
+            type="text"
+            name="Precio"
+            value="<%= service.Precio%>"
+            placeholder="Precio"
+            class="form-control mb-3"
+          />
+
+          <button type="submit" class="btn btn-primary">save service</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/_footer") %>
